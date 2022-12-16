@@ -5,6 +5,11 @@
 All the user-facing functions are contained in the `lib` output (or in
 `default.nix`, if you're not using flakes).
 
+## :warning: A note about timezones
+
+This **does not** handle timezones, because I want to keep my sanity. All the
+times are in UTC.
+
 ## Functions
 
 ### `splitSecondsSinceEpoch`
