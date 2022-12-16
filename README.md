@@ -37,7 +37,7 @@ nix-repl> with splitSecondsSinceEpoch {} __currentTime; "It's a nice ${A} out to
 
 ### `ISO-8601`
 
-Presents time in the ISO-8601 format, like `2009-02-13T23:31:30.000000000Z` .
+Presents time in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, like `2009-02-13T23:31:30.000000000Z` .
 
 #### Example:
 
@@ -48,7 +48,7 @@ nix-repl> ISO-8601 __currentTime
 
 ### `RFC-5322`
 
-Presents time in RFC 5322 (email) format, like `Mon, 14 Aug 2006 02:34:56 +0000`
+Presents time in [RFC 5322](https://www.rfc-editor.org/rfc/rfc5322#section-3.3) (email) format, like `Mon, 14 Aug 2006 02:34:56 +0000`
 
 #### Example:
 
@@ -59,7 +59,7 @@ nix-repl> RFC-5322 __currentTime
 
 ### `RFC-3339`
 
-Presents time in RFC 3339 format, like `2006-08-14 02:34:56+00:00`
+Presents time in [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339) format, like `2006-08-14 02:34:56+00:00`
 
 #### Example:
 
