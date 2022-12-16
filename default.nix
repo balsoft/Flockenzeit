@@ -77,6 +77,7 @@ rec {
       p = __elemAt [locale.AM locale.PM] (__div H 12);
 
       primitives = {
+        s = t;
         inherit H M S Y m d w u q A a B b F T j p I;
         ns = "000000000";
         z = "+0000";
