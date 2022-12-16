@@ -36,6 +36,8 @@ rec {
       dateFormat = parsed:
         with parsed;
         "${a} ${b} ${pad " " 2 d} ${T} ${Z} ${pad0 4 Y}";
+      AM = "AM";
+      PM = "PM";
     };
   };
 
@@ -70,9 +72,12 @@ rec {
       b = __substring 0 3 B;
       F = "${pad0 4 Y}-${pad0 2 m}-${pad0 2 d}";
       T = "${pad0 2 H}:${pad0 2 M}:${pad0 2 S}";
+      I' = rem H 12;
+      I = if I' == 0 then 12 else I';
+      p = __elemAt [locale.AM locale.PM] (__div H 12);
 
       primitives = {
-        inherit H M S Y m d w u q A a B b F T j;
+        inherit H M S Y m d w u q A a B b F T j p I;
         ns = "000000000";
         z = "+0000";
         Z = "Z";
