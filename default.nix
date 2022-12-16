@@ -81,6 +81,7 @@ rec {
         inherit H M S Y m d w u q A a B b F T j p I;
         N = "000000000";
         z = "+0000";
+        _z = "+00:00";
         Z = "Z";
       };
     in primitives // {
@@ -89,5 +90,5 @@ rec {
 
   ISO-8601 = s: with splitSecondsSinceEpoch { } s; "${F}T${T}.${N}${Z}";
   RFC-5322 = s: with splitSecondsSinceEpoch { } s; "${a}, ${pad0 2 d} ${b} ${pad0 4 Y} ${T} ${z}";
-  RFC-3339 = s: with splitSecondsSinceEpoch { } s; "${F} ${T}{z}";
+  RFC-3339 = s: with splitSecondsSinceEpoch { } s; "${F} ${T}${_z}";
 }

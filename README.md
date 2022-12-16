@@ -46,6 +46,28 @@ nix-repl> ISO-8601 __currentTime
 "2022-12-16T08:32:18.000000000Z"
 ```
 
+### `RFC-5322`
+
+Presents time in RFC 5322 (email) format, like `Mon, 14 Aug 2006 02:34:56 +0000`
+
+#### Example:
+
+```
+nix-repl> RFC-5322 __currentTime
+"Fri, 16 Dec 2022 10:02:38 +0000"
+```
+
+### `RFC-3339`
+
+Presents time in RFC 3339 format, like `2006-08-14 02:34:56+00:00`
+
+#### Example:
+
+```
+nix-repl> RFC-3339 __currentTime
+"2022-12-16 10:04:48+00:00"
+```
+
 ### `pad`
 
 `pad` takes a padding symbol, the desired length, and the string. If the string
