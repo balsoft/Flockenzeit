@@ -7,7 +7,7 @@
   "12 PM" = with lib.splitSecondsSinceEpoch { } (12 * 60 * 60); "${toString I} ${p}";
   "8 AM" = with lib.splitSecondsSinceEpoch { } (8 * 60 * 60); "${toString I} ${p}";
 
-  "May  1" = with lib.splitSecondsSinceEpoch { } 1651348800; "${b} ${pad " " 2 d}";
+  "May  1" = with lib.splitSecondsSinceEpoch { } 1651363200; "${b} ${lib.pad " " 2 d}";
   "08 AM" = with lib.splitSecondsSinceEpoch { } (8 * 60 * 60); "${lib.pad0 2 I} ${p}";
   "1970" = with lib.splitSecondsSinceEpoch { } 0; "${lib.pad0 4 Y}";
 }
