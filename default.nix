@@ -79,7 +79,7 @@ rec {
       primitives = {
         s = t;
         inherit H M S Y m d w u q A a B b F T j p I;
-        ns = "000000000";
+        N = "000000000";
         z = "+0000";
         Z = "Z";
       };
@@ -87,5 +87,7 @@ rec {
       c = locale.dateFormat primitives;
     };
 
-  ISO-8601 = s: with splitSecondsSinceEpoch { } s; "${F}T${T}.${ns}${Z}";
+  ISO-8601 = s: with splitSecondsSinceEpoch { } s; "${F}T${T}.${N}${Z}";
+  RFC-5322 = s: with splitSecondsSinceEpoch { } s; "${a}, ${pad0 2 d} ${b} ${pad0 4 Y} ${T} ${z}";
+  RFC-3339 = s: with splitSecondsSinceEpoch { } s; "${F} ${T}{z}";
 }
